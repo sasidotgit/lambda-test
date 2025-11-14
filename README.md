@@ -91,6 +91,9 @@ def lambda_handler(event, context):
         print(f"❌ Error: {str(e)}")
         return {
             'statusCode': 500,
+            'body': json.dumps({'error': str(e), 'resources': response_data})
+        }
+
 
 step for import and zip the .py file to create the lambda funtion.
 
@@ -150,11 +153,6 @@ If an error occurs, it returns a 500 status with error details.
 
 The final output will be you can access the AWS running service without login the aws console.
 
-https://bddjwufr8k.execute-api.us-east-1.amazonaws.com/dev/Pythontest1
+https://us-east-1dj8rbmhst.auth.us-east-1.amazoncognito.com/login/continue?client_id=5ue9102fv06gjb58jf7ln8k5dr&redirect_uri=https%3A%2F%2Fbddjwufr8k.execute-api.us-east-1.amazonaws.com%2Fdev%2FPythontest1&response_type=code&scope=email+openid+phone
 
 I will share the user id and password in seperate mail.
-
-
-            
-            'body': json.dumps({'error': str(e), 'resources': response_data})
-        }
