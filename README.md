@@ -1,5 +1,6 @@
 Here is the lambda funtion.py script. 
 
+
 import json
 import boto3
 import time
